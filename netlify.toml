@@ -6,6 +6,7 @@ command = "hugo --gc --minify"
 HUGO_VERSION = "0.84.4"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
+NODE_ENV = "production"
 
 [context.split1]
 command = "hugo --gc --minify --enableGitInfo"
@@ -13,6 +14,7 @@ command = "hugo --gc --minify --enableGitInfo"
 [context.split1.environment]
 HUGO_VERSION = "0.84.4"
 HUGO_ENV = "production"
+NODE_ENV = "production"
 
 [context.deploy-preview]
 command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"

@@ -1,4 +1,3 @@
 baseURL = "https://autodex.app"
 languageCode = "en-us"
 title = "Autodex"
-theme = "autodex"
