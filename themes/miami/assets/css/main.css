@@ -1,0 +1,38 @@
+::selection {
+  background: var(--brand);
+  color: #fff;
+}
+
+#content {
+  min-height: 100vh;
+}
+
+.landing {
+  color: #fff;
+  background: var(--brand);
+  background: linear-gradient(45deg, var(--brand) 0%, #f99b1E 100%);
+}
+
+.landing__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.landing__title {
+  text-transform: uppercase;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+}
+
+.landing__title::selection {
+  background: #fff;
+  color: var(--brand);
+}
+
+.landing__logo {
+  max-height: 200px;
+  fill: #fff;
+}

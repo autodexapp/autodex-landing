@@ -1,3 +1,4 @@
-baseURL = "https://autodex.app"
-languageCode = "en-us"
-title = "Autodex"
+baseURL = 'https://autodex.app/'
+languageCode = 'en-us'
+title = 'Autodex'
+theme = 'miami'

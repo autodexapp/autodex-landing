@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <main aria-role="main" class="landing">
+    <div class="landing__container">
+      {{- $logo := resources.Get "images/logo.svg" -}}
+    <img src="{{ $logo.RelPermalink }}" class="landing__logo">
+      <h1 class="landing__title">{{ .Site.Title }}</h1>
+      {{ .Content }}
+    </div>
+  </main>
+{{ end }}

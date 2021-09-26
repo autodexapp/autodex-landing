@@ -1,0 +1,24 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{ $favicon := resources.Get "favicon.svg" }}
+  <link rel="icon" href="{{ $favicon.Permalink }}">
+  {{ $title := (default site.Title .Page.Title) }}
+  <title>{{ $title }}</title>
+  {{ $styles :=
+    slice
+      (resources.Get "css/fonts.css")
+      (resources.Get "css/normalize.css")
+      (resources.Get "css/variables.css")
+      (resources.Get "css/milligram.css")
+      (resources.Get "css/main.css")
+    | resources.Concat "main.css"
+  }}
+  {{ if .Site.IsServer }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}"/>
+  {{ else }}
+    {{ $styles := $styles | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}"/>
+  {{ end }}
+</head>
