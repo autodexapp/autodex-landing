@@ -1,3 +1,3 @@
 ---
-subtitle: "Connecting drivers around the world."
+subtitle: "Connecting car enthusiasts around the world."
 ---
