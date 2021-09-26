@@ -27,7 +27,12 @@
   font-weight: 700;
 }
 
-.landing__title::selection {
+.landing__subtitle {
+  font-size: 2.75rem;
+}
+
+.landing__title::selection,
+.landing__subtitle::selection {
   background: #fff;
   color: var(--brand);
 }
