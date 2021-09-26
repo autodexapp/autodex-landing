@@ -6,6 +6,7 @@
   <link rel="icon" href="{{ $favicon.Permalink }}" integrity="{{ $favicon.Data.Integrity }}">
   {{ $title := (default site.Title .Page.Title) }}
   <title>{{ $title }}</title>
+  <meta name="description" content="{{ .Param "description" }}">
   {{ $styles :=
     slice
       (resources.Get "css/fonts.css")
