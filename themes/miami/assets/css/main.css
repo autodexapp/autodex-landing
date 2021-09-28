@@ -52,6 +52,7 @@
   text-transform: uppercase;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
+  margin-bottom: 1.25rem;
 }
 
 .focused__title {
@@ -62,7 +63,7 @@
 .focused__subtitle {
   text-align: center;
   padding: 0 2rem;
-  font-size: 2rem;
+  font-size: 2.125rem;
 }
 
 .landing__logo {
@@ -75,16 +76,19 @@
   margin-bottom: 0;
 }
 
-.subscribe {
-  margin-top: 1rem;
-  padding: 0.5rem;
+.landing__subscribe {
+  padding: 1rem;
+  width: 100%;
 }
 
-.subscribe__title {
-  font-size: 2rem;
-  margin: 0;
-  margin-bottom: 0.75rem;
-  text-align: center;
+@media (min-width: 40.0rem) {
+  .landing__subscribe {
+    width: auto;
+  }
+}
+
+.subscribe {
+  padding: 0.5rem;
 }
 
 @media (min-width: 40.0rem) {
