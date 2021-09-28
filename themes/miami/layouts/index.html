@@ -2,7 +2,7 @@
   <main class="landing">
     <div class="landing__container">
       {{- $logo := resources.Get "images/logo.svg" -}}
-    <img src="{{ $logo.RelPermalink }}" class="landing__logo" width="440" height="200" alt="Autodex Logo">
+      <img src="{{ $logo.RelPermalink }}" class="landing__logo" width="440" height="200" alt="Autodex Logo">
       <h1 class="landing__title">{{ .Site.Title }}</h1>
       {{ with .Params.Subtitle }}
         <h2 class="landing__subtitle">{{ . }}</h2>
