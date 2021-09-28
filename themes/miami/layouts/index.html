@@ -8,7 +8,9 @@
         <h2 class="landing__subtitle">{{ . }}</h2>
       {{ end }}
       {{ .Content }}
-      {{ partial "subscribe.html" . }}
+      <div class="landing__subscribe">
+        {{ partial "subscribe.html" . }}
+      </div>
     </div>
   </main>
 {{ end }}
