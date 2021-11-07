@@ -2,3 +2,5 @@ baseURL = 'https://autodex.app/'
 languageCode = 'en-us'
 title = 'Autodex'
 theme = 'miami'
+disableHugoGeneratorInject = true
+enableRobotsTXT = true
