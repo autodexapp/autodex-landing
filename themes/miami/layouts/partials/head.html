@@ -3,10 +3,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {{ $favicon := resources.Get "favicon.svg" | fingerprint }}
+  {{ $banner := resources.Get "images/banner.jpg" | fingerprint }}
   <link rel="icon" href="{{ $favicon.Permalink }}" integrity="{{ $favicon.Data.Integrity }}">
   {{ $title := (default site.Title .Page.Title) }}
   <title>{{ $title }}</title>
   <meta name="description" content="{{ .Param "description" }}">
+
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:description" content="{{ .Param "description" }}">
+  <meta property="og:site_name" content="Autodex">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:image" content="{{ $banner.Permalink }}">
+
+  <meta name="twitter:title" content="{{ $title }}">
+  <meta name="twitter:description" content="{{ .Param "description" }}">
+  <meta name="twitter:image" content="{{ $banner.Permalink }}">
+  <meta name="twitter:image:alt" content="Autodex Logo">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ with .OutputFormats.Get "RSS" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
+
   {{ $styles :=
     slice
       (resources.Get "css/fonts.css")
